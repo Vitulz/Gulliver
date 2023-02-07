@@ -28,7 +28,7 @@
             <Font name="System Bold" size="37.0" />
          </font>
       </Label>
-      <TextField fx:id="username" layoutX="388.0" layoutY="164.0" prefHeight="35.0" prefWidth="156.0" promptText="username">
+      <TextField fx:id="username" layoutX="388.0" layoutY="164.0" prefHeight="35.0" prefWidth="156.0" promptText="Username">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label fx:id="loginErrorLabel" layoutX="423.0" layoutY="114.0" prefHeight="26.0" prefWidth="70.0">
+      <Label fx:id="loginErrorLabel" layoutX="345.0" layoutY="114.0" prefHeight="26.0" prefWidth="226.0">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
