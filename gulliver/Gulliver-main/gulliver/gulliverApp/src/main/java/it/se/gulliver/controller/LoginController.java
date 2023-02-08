@@ -55,6 +55,8 @@ public class LoginController implements Initializable, DataInitializable<Object>
 			dispatcher.loggedIn(utente);
 		} catch(UtenteNotFoundException e) {
 			loginErrorLabel.setText("Username e/o password errati");
+		} catch (BusinessException e) {
+			dispatcher.renderError(e);
 		}
 	}
 

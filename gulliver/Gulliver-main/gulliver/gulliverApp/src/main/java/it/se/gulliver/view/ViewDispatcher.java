@@ -69,7 +69,7 @@ public class ViewDispatcher {
 		}
 	}
 	
-	public void renderError(ViewException e) {
+	public void renderError(Exception e) {
 		e.printStackTrace();
 		System.exit(1);
 	}
