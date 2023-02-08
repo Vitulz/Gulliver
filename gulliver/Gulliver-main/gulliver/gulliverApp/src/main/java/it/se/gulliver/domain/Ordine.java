@@ -13,8 +13,16 @@ public class Ordine {
 	private String indirizzoDiConsegna;
 	private int telefonoAnziano;
 	private double totale;
+	private boolean valido;
 
-	// valido?
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public int getCostiDiVariazione() {
 		return costiDiVariazione;
 	}
@@ -71,16 +79,20 @@ public class Ordine {
 		this.totale = totale;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
 	public Set<ProdottoCarrello> getProdotti() {
 		return prodotti;
 	}
 
 	public void setProdotti(Set<ProdottoCarrello> prodotti) {
 		this.prodotti = prodotti;
+	}
+
+	public boolean isValido() {
+		return valido;
+	}
+
+	public void setValido(boolean valido) {
+		this.valido = valido;
 	}
 
 }

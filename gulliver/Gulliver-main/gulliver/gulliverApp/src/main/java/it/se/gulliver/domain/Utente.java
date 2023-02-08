@@ -1,6 +1,5 @@
 package it.se.gulliver.domain;
 
-
 public class Utente {
 
 	private Integer id;
@@ -8,11 +7,9 @@ public class Utente {
 	private String cognome;
 	private String username;
 	private String password;
-	
-	
+
 	// Costruttore?
-	
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -52,6 +49,5 @@ public class Utente {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+
 }

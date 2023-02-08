@@ -1,8 +1,8 @@
 package it.se.gulliver.domain;
 
 public class Operatore extends Utente {
-	
-	private String indirizzo; 
+
+	private String indirizzo;
 	private int numeroDiTelefono;
 
 	public String getIndirizzo() {
@@ -20,6 +20,5 @@ public class Operatore extends Utente {
 	public void setNumeroDiTelefono(int numeroDiTelefono) {
 		this.numeroDiTelefono = numeroDiTelefono;
 	}
-	
-	
+
 }

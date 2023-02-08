@@ -7,15 +7,29 @@ public class Carrello {
 	private Integer id;
 	private Set<ProdottoCarrello> prodotti;
 	private int totale;
-	public int getTotale() {
-		return totale;
-	}
-	public void setTotale(int totale) {
-		this.totale = totale;
-	}
+
 	public Integer getId() {
 		return id;
 	}
-	
-	
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public int getTotale() {
+		return totale;
+	}
+
+	public void setTotale(int totale) {
+		this.totale = totale;
+	}
+
+	public Set<ProdottoCarrello> getProdotti() {
+		return prodotti;
+	}
+
+	public void setProdotti(Set<ProdottoCarrello> prodotti) {
+		this.prodotti = prodotti;
+	}
+
 }

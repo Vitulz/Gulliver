@@ -11,5 +11,5 @@ public class Socio extends Utente {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	
+
 }
