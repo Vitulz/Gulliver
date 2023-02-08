@@ -1,6 +1,5 @@
 package it.se.gulliver.controller;
 
-import java.awt.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -8,6 +7,7 @@ import it.se.gulliver.domain.Operatore;
 import it.se.gulliver.domain.Utente;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 public class HomeController implements Initializable, DataInitializable<Utente> {
 

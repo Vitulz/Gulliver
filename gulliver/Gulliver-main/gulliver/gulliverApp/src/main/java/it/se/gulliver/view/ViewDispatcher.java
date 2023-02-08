@@ -39,7 +39,7 @@ public class ViewDispatcher {
 			View<Utente> layoutView = loadView("layout");
 			DataInitializable<Utente> layoutController = layoutView.getController();
 			layoutController.initializeData(utente);
-			layout = (BorderPane) loadView("layout").getView();
+			layout = (BorderPane) layoutView.getView();
 			renderView("home", utente);
 			Scene scene = new Scene(layout);
 			stage.setScene(scene);

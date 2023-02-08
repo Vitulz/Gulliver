@@ -78,7 +78,7 @@ public class LayoutController implements Initializable, DataInitializable<Utente
 	
 	@FXML
 	public void esciAction (MouseEvent event) {
-		// TODO: dispatcher.logout();
+		dispatcher.logout();
 	}
 	
 	private Button createButton(MenuElement viewItem) {
@@ -86,8 +86,8 @@ public class LayoutController implements Initializable, DataInitializable<Utente
 		Button button = new Button(viewItem.getNome());
 		button.setStyle("-fx-background-color: transparent; -fx-font-size: 14;");
 		button.setTextFill(Paint.valueOf("white"));
-		button.setPrefHeight(10);
-		button.setPrefWidth(180);
+		button.setPrefHeight(25);
+		button.setPrefWidth(116);
 		button.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
