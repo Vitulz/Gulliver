@@ -58,6 +58,7 @@ public class ViewDispatcher {
 		}
 	}
 	
+	
 	public <T> void renderView(String viewName, T data) {
 		try {
 			View<T> view = loadView(viewName);

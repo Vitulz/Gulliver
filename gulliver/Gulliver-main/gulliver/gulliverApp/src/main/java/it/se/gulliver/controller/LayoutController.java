@@ -26,13 +26,13 @@ public class LayoutController implements Initializable, DataInitializable<Utente
 
 	private static final MenuElement MENU_HOME = new MenuElement("Home", "home");
 	
-	private static final MenuElement[] MENU_OPERATORE = {new MenuElement("Crea ordine", "creaOrdine"), 
+	private static final MenuElement[] MENU_OPERATORE = {new MenuElement("Crea ordine", "selezionetipospesa"), 
 														new MenuElement("Lista di ordini", "listaDiOrdiniOperatore")};
 	
-	private static final MenuElement[] MENU_SOCIO = {new MenuElement("Crea ordine", "creaOrdine"), 
+	private static final MenuElement[] MENU_SOCIO = {new MenuElement("Crea ordine", "selezionetipospesa"), 
 			new MenuElement("Lista di ordini", "listaDiOrdiniGlobali")};
 	
-	private static final MenuElement[] MENU_GESTORE = {new MenuElement("Crea ordine", "creaOrdine"), 
+	private static final MenuElement[] MENU_GESTORE = {new MenuElement("Crea ordine", "selezionetipospesa"), 
 			new MenuElement("Lista di ordini", "listaDiOrdiniGlobali"),
 			new MenuElement("CRUD utente", "crudUtente"), 
 			new MenuElement("Gestione catalogo", "gestioneCatalogo")};
@@ -81,6 +81,11 @@ public class LayoutController implements Initializable, DataInitializable<Utente
 		dispatcher.logout();
 	}
 	
+	@FXML
+	public void easterAction(MouseEvent event) {
+		dispatcher.renderView("rabbit", utente);
+	}
+	
 	private Button createButton(MenuElement viewItem) {
 		
 		Button button = new Button(viewItem.getNome());
@@ -96,6 +101,8 @@ public class LayoutController implements Initializable, DataInitializable<Utente
 		});
 		return button;
 	}
+	
+	
 	
 }
 
