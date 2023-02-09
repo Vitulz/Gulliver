@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import it.se.gulliver.domain.Utente;
+import it.se.gulliver.domain.TipologiaSpesa;
 import it.se.gulliver.view.ViewDispatcher;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,13 +12,14 @@ import javafx.scene.control.Button;
 
 public class SelezioneTipologiaSpesaController implements Initializable, DataInitializable<Utente> {
 
-	private ViewDispatcher dispatcher;
-
 	@FXML
 	private Button farmaciButton;
 
 	@FXML
 	private Button alimentariButton;
+	
+	private ViewDispatcher dispatcher;
+	private Utente utente;
 
 	public SelezioneTipologiaSpesaController() {
 		dispatcher = ViewDispatcher.getInstance();
@@ -28,13 +30,17 @@ public class SelezioneTipologiaSpesaController implements Initializable, DataIni
 		// TODO Auto-generated method stub
 
 	}
+	
+	public void initializeData(Utente utente) {
+		this.utente = utente;
+	}
 
 	public void farmaciOnAction() {
-		// TODO
+		dispatcher.renderView("catalogo", utente);
 	}
 
 	public void alimentariOnAction() {
-		// TODO
+		dispatcher.renderView("catalogo", utente);
 	}
 
 }

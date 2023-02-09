@@ -20,8 +20,4 @@ public class RabbitController implements Initializable, DataInitializable<Utente
 		
 	}
 	
-	@Override
-	public void initializeData(Utente utente) {
-		
-	}
 }

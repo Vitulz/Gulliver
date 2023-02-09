@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.CatalogoController">
+   <children>
+      <Label prefHeight="34.0" prefWidth="110.0" text=" Catalogo">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="catalogoTable" prefHeight="365.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="immagineTableColumn" prefWidth="117.59997254610062" text="Immagine" />
+          <TableColumn fx:id="nomeTableColumn" prefWidth="141.59999084472656" text="Nome" />
+            <TableColumn fx:id="prezzoTableColumn" prefWidth="109.60003662109375" text="Prezzo" />
+            <TableColumn prefWidth="118.39996337890625" />
+            <TableColumn fx:id="azioniTableColumn" prefWidth="113.5999755859375" text="Azioni" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
