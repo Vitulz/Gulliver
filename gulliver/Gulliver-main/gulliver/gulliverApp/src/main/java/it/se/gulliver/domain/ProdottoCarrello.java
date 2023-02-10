@@ -4,7 +4,8 @@ public class ProdottoCarrello {
 
 	private Integer id;
 	private int quantità;
-	private double prezzo;
+	private Prodotto prodotto;
+	private Double prezzo;
 	private boolean spunta;
 
 	public int getQuantità() {
@@ -37,6 +38,14 @@ public class ProdottoCarrello {
 
 	public void setSpunta(boolean spunta) {
 		this.spunta = spunta;
+	}
+
+	public Prodotto getProdotto() {
+		return prodotto;
+	}
+
+	public void setProdotto(Prodotto prodotto) {
+		this.prodotto = prodotto;
 	}
 
 }

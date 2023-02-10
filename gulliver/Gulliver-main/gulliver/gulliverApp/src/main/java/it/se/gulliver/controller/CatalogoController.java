@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import it.se.gulliver.business.BusinessException;
+import it.se.gulliver.business.CarrelloService;
 import it.se.gulliver.business.CatalogoService;
 import it.se.gulliver.business.GulliverBusinessFactory;
 import it.se.gulliver.domain.Prodotto;
@@ -42,12 +43,17 @@ public class CatalogoController implements Initializable, DataInitializable<Uten
 
 	private ViewDispatcher dispatcher;
 	
+	private Utente utente;
+	
 	private CatalogoService catalogoService;
+	
+	private CarrelloService carrelloService;
 
 	public CatalogoController() {
 		this.dispatcher = ViewDispatcher.getInstance();
 		GulliverBusinessFactory factory = GulliverBusinessFactory.getInstance();
 		catalogoService = factory.getCatalogoService();
+		carrelloService = factory.getCarrelloService();
 	}
 	
 	
@@ -58,22 +64,32 @@ public class CatalogoController implements Initializable, DataInitializable<Uten
 		prezzoTableColumn.setCellValueFactory(new PropertyValueFactory<>("prezzo"));
 		azioniTableColumn.setStyle("-fx-alignment: CENTER;");
 		azioniTableColumn.setCellValueFactory((CellDataFeatures<Prodotto, Button> param) -> {
-			final Button carrelloButton = new Button("Aggiungi al carrello");
-			carrelloButton.setOnAction((ActionEvent event) -> {
-				//TODO
+			final Button aggiungiCarrelloButton = new Button("Aggiungi al carrello");
+			aggiungiCarrelloButton.setOnAction((ActionEvent event) -> {
+				try {
+					carrelloService.aggiungiProdottoCarrello(param.getValue());
+				} catch (BusinessException e) {
+					e.printStackTrace();
+				}
 			});
-			return new SimpleObjectProperty<Button>(carrelloButton);
+			return new SimpleObjectProperty<Button>(aggiungiCarrelloButton);
 		});
 	}
 	
 	@Override
 	public void initializeData(Utente utente) {
 		try {
+			this.utente = utente;
 			List<Prodotto> catalogo = catalogoService.findAllProdotti(utente);
 			ObservableList<Prodotto> catalogoData = FXCollections.observableArrayList(catalogo);
 			catalogoTable.setItems(catalogoData);
 		} catch (BusinessException e) {
 			dispatcher.renderError(e);
 		}
+	}
+	
+	@FXML
+	public void carrelloOnAction() {
+		dispatcher.renderView("carrello", utente);
 	}
 }

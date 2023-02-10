@@ -1,10 +1,13 @@
 package it.se.gulliver.domain;
 
+import javafx.scene.image.Image;
+
 public class Prodotto {
 
 	private Integer id;
 	private String nome;
-	private double prezzo;
+	private Double prezzo;
+	private Image immagine;
 
 	public String getNome() {
 		return nome;
@@ -14,11 +17,11 @@ public class Prodotto {
 		this.nome = nome;
 	}
 
-	public double getPrezzo() {
+	public Double getPrezzo() {
 		return prezzo;
 	}
 
-	public void setPrezzo(double prezzo) {
+	public void setPrezzo(Double prezzo) {
 		this.prezzo = prezzo;
 	}
 
@@ -28,6 +31,14 @@ public class Prodotto {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Image getImmagine() {
+		return immagine;
+	}
+
+	public void setImmagine(Image immagine) {
+		this.immagine = immagine;
 	}
 
 }

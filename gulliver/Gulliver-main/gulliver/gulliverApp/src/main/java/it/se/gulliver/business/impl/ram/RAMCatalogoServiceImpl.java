@@ -13,7 +13,7 @@ public class RAMCatalogoServiceImpl implements CatalogoService {
 	@Override
 	public List<Prodotto> findAllProdotti(Utente utente) throws BusinessException {
 		List<Prodotto> result = new ArrayList<Prodotto>();
-		int id = 3;
+		Integer id = 1;
 		
 		Prodotto latte = new Prodotto();
 		latte.setId(id++);
@@ -22,25 +22,24 @@ public class RAMCatalogoServiceImpl implements CatalogoService {
 		result.add(latte);
 		
 		Prodotto pane = new Prodotto();
-		latte.setId(id++);
-		latte.setNome("Pane 1KG");
-		latte.setPrezzo(2.00);
+		pane.setId(id++);
+		pane.setNome("Pane 1KG");
+		pane.setPrezzo(2.00);
 		result.add(pane);
 		
 		Prodotto farina = new Prodotto();
-		latte.setId(id++);
-		latte.setNome("Farina 1KG");
-		latte.setPrezzo(0.80);
+		farina.setId(id++);
+		farina.setNome("Farina 1KG");
+		farina.setPrezzo(0.80);
 		result.add(farina);
 		
 		Prodotto uova = new Prodotto();
-		latte.setId(id++);
-		latte.setNome("Uova 6");
-		latte.setPrezzo(1.30);
+		uova.setId(id++);
+		uova.setNome("Uova 6");
+		uova.setPrezzo(1.30);
 		result.add(uova);
 		
-		
-		
+	
 		
 		return result;
 		

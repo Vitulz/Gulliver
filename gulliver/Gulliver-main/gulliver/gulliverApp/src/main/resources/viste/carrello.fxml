@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.CarrelloController">
+   <children>
+      <HBox prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="38.0" prefWidth="249.0" text="Carrello">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="70.0" prefWidth="510.0" style="-fx-background-color: FFFFFF;" />
+            <ImageView fitHeight="41.0" fitWidth="46.0" onMouseClicked="#goBackAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@goBackImage.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <TableView prefHeight="369.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="immagineTableColumn" prefWidth="168.0" text="Immagine" />
+          <TableColumn fx:id="nomeTableColumn" prefWidth="150.4000244140625" text="Nome" />
+            <TableColumn fx:id="prezzoTableColumn" prefWidth="66.39996337890625" text="Prezzo" />
+            <TableColumn fx:id="qunatitàTableColumn" prefWidth="70.4000244140625" text="Quantità" />
+            <TableColumn fx:id="azioniTableColumn" prefWidth="152.79998779296875" text="Azioni" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
