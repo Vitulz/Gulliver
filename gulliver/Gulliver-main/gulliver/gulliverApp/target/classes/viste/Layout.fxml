@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.LayoutController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="733.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.LayoutController">
    <top>
       <HBox prefHeight="83.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
@@ -16,7 +16,7 @@
                   <Image url="@gulliver-logo.png" />
                </image>
             </ImageView>
-            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="430.0" style="-fx-background-color: FFFFFF;" />
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="87.0" prefWidth="586.0" style="-fx-background-color: #D3DFB8;" />
             <ImageView fx:id="esciButton" fitHeight="48.0" fitWidth="61.0" onMouseClicked="#esciAction" onMouseDragged="#easterAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logout.png" />
