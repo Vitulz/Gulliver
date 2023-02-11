@@ -3,7 +3,7 @@ package it.se.gulliver.domain;
 public class ProdottoCarrello {
 
 	private Integer id;
-	private int quantità;
+	private Integer quantità;
 	private Prodotto prodotto;
 	private Double prezzo;
 	private boolean spunta;

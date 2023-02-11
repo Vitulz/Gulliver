@@ -11,7 +11,11 @@ import it.se.gulliver.domain.Utente;
 
 public class RAMCarrelloServiceImpl implements CarrelloService{
 
-	private List<ProdottoCarrello> result = new ArrayList<ProdottoCarrello>();
+	private List<ProdottoCarrello> result;
+	
+	public RAMCarrelloServiceImpl() {
+		result = new ArrayList<ProdottoCarrello>();
+	}
 	
 	@Override
 	public List<ProdottoCarrello> findAllProdottiCarrello(Utente utente) throws BusinessException {
@@ -25,8 +29,8 @@ public class RAMCarrelloServiceImpl implements CarrelloService{
 			if(p.getProdotto().equals(prodotto)) {
 				p.setQuantità(p.getQuantità() + 1);
 				p.setPrezzo(p.getPrezzo() + prodotto.getPrezzo());
+				return;
 			}
-			return;
 		}
 		ProdottoCarrello prodottoCarrello = new ProdottoCarrello();
 		prodottoCarrello.setProdotto(prodotto);

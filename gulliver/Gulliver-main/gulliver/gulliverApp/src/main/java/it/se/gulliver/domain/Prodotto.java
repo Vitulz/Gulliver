@@ -40,5 +40,12 @@ public class Prodotto {
 	public void setImmagine(Image immagine) {
 		this.immagine = immagine;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null || !(obj instanceof Prodotto)) return false;
+		Prodotto p = (Prodotto) obj;
+		return (this.nome.equals(p.nome) && this.prezzo.equals(p.prezzo));
+	}
 
 }

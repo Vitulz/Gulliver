@@ -79,6 +79,7 @@ public class CarrelloController implements Initializable, DataInitializable<Uten
 		try {
 			this.utente = utente;
 			List<ProdottoCarrello> carrello = carrelloService.findAllProdottiCarrello(utente);
+			carrello.forEach(System.out::println);
 			ObservableList<ProdottoCarrello> carrelloData = FXCollections.observableArrayList(carrello);
 			carrelloTable.setItems(carrelloData);
 		} catch (BusinessException e) {

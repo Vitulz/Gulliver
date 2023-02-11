@@ -27,12 +27,12 @@
             </ImageView>
          </children>
       </HBox>
-      <TableView prefHeight="369.0" prefWidth="600.0">
+      <TableView fx:id="carrelloTable" prefHeight="369.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="immagineTableColumn" prefWidth="168.0" text="Immagine" />
           <TableColumn fx:id="nomeTableColumn" prefWidth="150.4000244140625" text="Nome" />
             <TableColumn fx:id="prezzoTableColumn" prefWidth="66.39996337890625" text="Prezzo" />
-            <TableColumn fx:id="qunatitàTableColumn" prefWidth="70.4000244140625" text="Quantità" />
+            <TableColumn fx:id="quantitàTableColumn" prefWidth="70.4000244140625" text="Quantità" />
             <TableColumn fx:id="azioniTableColumn" prefWidth="152.79998779296875" text="Azioni" />
         </columns>
       </TableView>

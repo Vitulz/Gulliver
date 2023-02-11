@@ -14,6 +14,7 @@ public class RAMGulliverBusinessFactoryImpl extends GulliverBusinessFactory{
 	public RAMGulliverBusinessFactoryImpl() {
 		utenteService = new RAMUtenteServiceImpl();
 		catalogoService = new RAMCatalogoServiceImpl();
+		carrelloService = new RAMCarrelloServiceImpl();
 	}
 	
 	@Override
