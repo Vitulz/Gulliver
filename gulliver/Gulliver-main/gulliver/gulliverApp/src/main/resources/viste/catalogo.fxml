@@ -10,31 +10,32 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.CatalogoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.CatalogoController">
    <children>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label prefHeight="35.0" prefWidth="129.0" text="Catalogo">
+            <Label prefHeight="38.0" prefWidth="249.0" text="Catalogo">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
             <Separator opacity="0.0" orientation="VERTICAL" prefHeight="42.0" prefWidth="432.0" />
-            <ImageView fitHeight="41.0" fitWidth="43.0" onMouseClicked="#carrelloOnAction" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="41.0" fitWidth="46.0" onMouseClicked="#carrelloOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@cartImage.png" />
                </image>
             </ImageView>
          </children>
       </HBox>
-      <TableView fx:id="catalogoTable" prefHeight="429.0" prefWidth="600.0">
+      <TableView fx:id="catalogoTable" prefHeight="469.0" prefWidth="600.0">
         <columns>
-          <TableColumn fx:id="immagineTableColumn" prefWidth="117.59997254610062" text="Immagine" />
-          <TableColumn fx:id="nomeTableColumn" prefWidth="141.59999084472656" text="Nome" />
-            <TableColumn fx:id="prezzoTableColumn" prefWidth="76.00006103515625" text="Prezzo" />
-            <TableColumn prefWidth="122.4000244140625" />
+          <TableColumn fx:id="immagineTableColumn" prefWidth="172.00006103515625" text="Immagine" />
+          <TableColumn fx:id="nomeTableColumn" prefWidth="122.4000244140625" text="Nome" />
+            <TableColumn fx:id="prezzoTableColumn" prefWidth="78.4000244140625" text="Prezzo" />
+            <TableColumn prefWidth="87.99993896484375" />
             <TableColumn fx:id="azioniTableColumn" prefWidth="144.0" text="Azioni" />
         </columns>
       </TableView>
+      <Separator opacity="0.0" prefHeight="142.0" prefWidth="600.0" />
    </children>
 </VBox>

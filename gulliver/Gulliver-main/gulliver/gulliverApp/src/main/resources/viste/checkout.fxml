@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Inserimento dati">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Separator prefHeight="18.0" prefWidth="600.0" />
+      <HBox prefHeight="50.0" prefWidth="307.0">
+         <children>
+            <Label text="Nome anziano:  ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField />
+         </children>
+      </HBox>
+      <HBox prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label text="Cognome anziano:  ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField />
+         </children>
+      </HBox>
+      <HBox prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label text="Indirizzo di consegna:  ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField prefHeight="26.0" prefWidth="192.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="66.0" prefWidth="600.0">
+         <children>
+            <Label text="Note dell'anziano:  ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextArea prefHeight="72.0" prefWidth="272.0" />
+         </children>
+      </HBox>
+      <Separator prefHeight="29.0" prefWidth="600.0" />
+      <Label prefHeight="37.0" prefWidth="202.0" text="Riepilogo ordine: ">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="38.0" prefWidth="600.0">
+         <children>
+            <Label text="Totale articoli: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="32.0" prefWidth="61.0" />
+            <Label fx:id="totaleArticoliLabel" prefHeight="35.0" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="43.0" prefWidth="600.0">
+         <children>
+            <Label text="Costi fissi: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="37.0" prefWidth="91.0" />
+            <Label fx:id="costiFissiLabel" prefHeight="35.0" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="94.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="92.0" prefWidth="199.0">
+               <children>
+                  <Separator prefHeight="30.0" prefWidth="600.0" style="-fx-background-color: 000000;" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="119.0" text="Totale ordine: ">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator opacity="0.0" orientation="VERTICAL" prefHeight="82.0" prefWidth="57.0" />
+                        <Label fx:id="totaleOrdineLabel" prefHeight="35.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="89.0" prefWidth="347.0" />
+            <AnchorPane prefHeight="90.0" prefWidth="154.0">
+               <children>
+                  <Button fx:id="confermaOrdineButton" layoutX="-54.0" layoutY="45.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="141.0" text="Conferma Ordine" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -11,4 +11,6 @@ public interface CarrelloService {
 	public List<ProdottoCarrello> findAllProdottiCarrello(Utente utente) throws BusinessException;
 	
 	public void aggiungiProdottoCarrello(Prodotto prodotto) throws BusinessException;
+	
+	public Double getTotale();
 }

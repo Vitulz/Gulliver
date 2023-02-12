@@ -12,6 +12,7 @@ import it.se.gulliver.domain.Utente;
 public class RAMCarrelloServiceImpl implements CarrelloService{
 
 	private List<ProdottoCarrello> result;
+	private Double totale = 0.0;
 	
 	public RAMCarrelloServiceImpl() {
 		result = new ArrayList<ProdottoCarrello>();
@@ -29,6 +30,7 @@ public class RAMCarrelloServiceImpl implements CarrelloService{
 			if(p.getProdotto().equals(prodotto)) {
 				p.setQuantità(p.getQuantità() + 1);
 				p.setPrezzo(p.getPrezzo() + prodotto.getPrezzo());
+				totale += p.getPrezzo();
 				return;
 			}
 		}
@@ -36,8 +38,13 @@ public class RAMCarrelloServiceImpl implements CarrelloService{
 		prodottoCarrello.setProdotto(prodotto);
 		prodottoCarrello.setQuantità(1);
 		prodottoCarrello.setPrezzo(prodotto.getPrezzo());
+		totale += prodottoCarrello.getPrezzo();
 		result.add(prodottoCarrello);
 
+	}
+	
+	public Double getTotale() {
+		return totale;
 	}
 
 }

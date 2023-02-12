@@ -6,7 +6,7 @@ public class Carrello {
 
 	private Integer id;
 	private Set<ProdottoCarrello> prodotti;
-	private int totale;
+	private Double totale;
 
 	public Integer getId() {
 		return id;
@@ -16,11 +16,11 @@ public class Carrello {
 		this.id = id;
 	}
 
-	public int getTotale() {
+	public Double getTotale() {
 		return totale;
 	}
 
-	public void setTotale(int totale) {
+	public void setTotale(Double totale) {
 		this.totale = totale;
 	}
 

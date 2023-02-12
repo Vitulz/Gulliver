@@ -18,6 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn.CellDataFeatures;
@@ -25,7 +26,13 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 
 public class CarrelloController implements Initializable, DataInitializable<Utente> {
-
+	
+	@FXML
+	private Button checkOutButton;
+	
+	@FXML
+	private Label totaleLabel;
+	
 	@FXML
 	private TableView<ProdottoCarrello> carrelloTable;
 	
@@ -79,9 +86,12 @@ public class CarrelloController implements Initializable, DataInitializable<Uten
 		try {
 			this.utente = utente;
 			List<ProdottoCarrello> carrello = carrelloService.findAllProdottiCarrello(utente);
-			carrello.forEach(System.out::println);
 			ObservableList<ProdottoCarrello> carrelloData = FXCollections.observableArrayList(carrello);
 			carrelloTable.setItems(carrelloData);
+			StringBuilder testo = new StringBuilder();
+			testo.append("TOTALE PROVVISORIO: ");
+			testo.append(carrelloService.getTotale());
+			totaleLabel.setText(testo.toString());
 		} catch (BusinessException e) {
 			dispatcher.renderError(e);
 		}
@@ -91,6 +101,11 @@ public class CarrelloController implements Initializable, DataInitializable<Uten
 	@FXML
 	public void goBackAction() {
 		dispatcher.renderView("catalogo", utente);
+	}
+	
+	@FXML
+	public void checkOutAction() {
+		dispatcher.renderView("checkout", utente);
 	}
 	
 	
