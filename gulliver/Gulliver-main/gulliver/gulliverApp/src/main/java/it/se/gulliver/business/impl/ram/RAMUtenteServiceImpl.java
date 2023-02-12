@@ -12,7 +12,7 @@ public class RAMUtenteServiceImpl implements UtenteService{
 	
 	@Override
 	public Utente authenticate(String username, String password) throws BusinessException {
-		if("operatore".equals(username)) {
+		if("operatore".equals(username) && "operatore".equals(password)) {
 			Operatore operatore = new Operatore();
 			operatore.setUsername(username);
 			operatore.setPassword(password);
@@ -23,7 +23,7 @@ public class RAMUtenteServiceImpl implements UtenteService{
 			return operatore;
 		}
 		
-		if("socio".equals(username)) {
+		if("socio".equals(username) && "socio".equals(password)) {
 			Socio socio = new Socio();
 			socio.setUsername(username);
 			socio.setPassword(password);
@@ -33,7 +33,7 @@ public class RAMUtenteServiceImpl implements UtenteService{
 			return socio;
 		}
 		
-		if("gestore".equals(username)) {
+		if("gestore".equals(username) && "gestore".equals(password)) {
 			Utente gestore = new Gestore();
 			gestore.setUsername(username);
 			gestore.setPassword(password);

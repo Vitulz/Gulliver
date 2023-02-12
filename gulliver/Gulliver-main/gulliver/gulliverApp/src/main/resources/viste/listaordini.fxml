@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.ListaOrdiniController">
+   <children>
+      <Label prefHeight="38.0" prefWidth="249.0" text="Lista ordini">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="listaOrdiniTable" prefHeight="423.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="indirizzoTableColumn" prefWidth="196.66665649414062" text="Indirizzo" />
+          <TableColumn fx:id="nomeTableColumn" minWidth="0.0" prefWidth="127.33331298828125" text="Nome" />
+            <TableColumn fx:id="cognomeTableColumn" prefWidth="120.66668701171875" text="Cognome" />
+            <TableColumn fx:id="totaleTableColumn" minWidth="0.0" prefWidth="61.99993896484375" text="Totale" />
+            <TableColumn fx:id="azioniTableColumn" prefWidth="94.66668701171875" text="Azioni" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
