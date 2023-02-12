@@ -1,18 +1,18 @@
 package it.se.gulliver.domain;
 
-import java.util.Set;
+import java.util.List;
 
 public class Ordine {
 
 	private Integer id;
-	private Set<ProdottoCarrello> prodotti;
-	private int costiDiVariazione;
+	private List<ProdottoCarrello> prodotti;
+	private Integer costiDiVariazione;
 	private String nomeAnziano;
 	private String cognomeAnziano;
 	private String note;
 	private String indirizzoDiConsegna;
-	private int telefonoAnziano;
-	private double totale;
+	private String telefonoAnziano;
+	private Double totale;
 	private boolean valido;
 
 	public Integer getId() {
@@ -23,11 +23,11 @@ public class Ordine {
 		this.id = id;
 	}
 
-	public int getCostiDiVariazione() {
+	public Integer getCostiDiVariazione() {
 		return costiDiVariazione;
 	}
 
-	public void setCostiDiVariazione(int costiDiVariazione) {
+	public void setCostiDiVariazione(Integer costiDiVariazione) {
 		this.costiDiVariazione = costiDiVariazione;
 	}
 
@@ -63,27 +63,27 @@ public class Ordine {
 		this.indirizzoDiConsegna = indirizzoDiConsegna;
 	}
 
-	public int getTelefonoAnziano() {
+	public String getTelefonoAnziano() {
 		return telefonoAnziano;
 	}
 
-	public void setTelefonoAnziano(int telefonoAnziano) {
+	public void setTelefonoAnziano(String telefonoAnziano) {
 		this.telefonoAnziano = telefonoAnziano;
 	}
 
-	public double getTotale() {
+	public Double getTotale() {
 		return totale;
 	}
 
-	public void setTotale(double totale) {
+	public void setTotale(Double totale) {
 		this.totale = totale;
 	}
 
-	public Set<ProdottoCarrello> getProdotti() {
+	public List<ProdottoCarrello> getProdotti() {
 		return prodotti;
 	}
 
-	public void setProdotti(Set<ProdottoCarrello> prodotti) {
+	public void setProdotti(List<ProdottoCarrello> prodotti) {
 		this.prodotti = prodotti;
 	}
 

@@ -14,4 +14,5 @@ public abstract class GulliverBusinessFactory {
 	public abstract CatalogoService getCatalogoService();
 	public abstract CarrelloService getCarrelloService();
 	public abstract CostiFissiService getCostiFissiService();
+	public abstract OrdineService getOrdineService();
 }

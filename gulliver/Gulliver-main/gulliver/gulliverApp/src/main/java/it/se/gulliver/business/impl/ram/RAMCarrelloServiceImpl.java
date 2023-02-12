@@ -6,6 +6,7 @@ import java.util.List;
 import it.se.gulliver.business.BusinessException;
 import it.se.gulliver.business.CarrelloService;
 import it.se.gulliver.business.CostiFissiService;
+import it.se.gulliver.domain.Ordine;
 import it.se.gulliver.domain.Prodotto;
 import it.se.gulliver.domain.ProdottoCarrello;
 import it.se.gulliver.domain.Utente;
@@ -48,5 +49,14 @@ public class RAMCarrelloServiceImpl implements CarrelloService{
 		return totaleProvvisorio;
 	}
 
-
+	@Override
+	public boolean confermaOrdine(Ordine ordine) {
+		
+		if (!ordine.getNomeAnziano().isBlank() && !ordine.getCognomeAnziano().isBlank() && !ordine.getIndirizzoDiConsegna().isBlank() && !ordine.getTelefonoAnziano().isBlank()) {
+			ordine.setValido(true);
+			return ordine.isValido();
+		}
+		return ordine.isValido();
+		
+	}
 }

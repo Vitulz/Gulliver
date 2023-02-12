@@ -2,6 +2,7 @@ package it.se.gulliver.business;
 
 import java.util.List;
 
+import it.se.gulliver.domain.Ordine;
 import it.se.gulliver.domain.Prodotto;
 import it.se.gulliver.domain.ProdottoCarrello;
 import it.se.gulliver.domain.Utente;
@@ -13,5 +14,7 @@ public interface CarrelloService {
 	public void aggiungiProdottoCarrello(Prodotto prodotto) throws BusinessException;
 	
 	public Double getTotaleProvvisorio();
+	
+	public boolean confermaOrdine(Ordine ordine);
 	
 }
