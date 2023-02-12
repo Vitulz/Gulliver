@@ -90,7 +90,7 @@ public class CarrelloController implements Initializable, DataInitializable<Uten
 			carrelloTable.setItems(carrelloData);
 			StringBuilder testo = new StringBuilder();
 			testo.append("TOTALE PROVVISORIO: ");
-			testo.append(carrelloService.getTotale());
+			testo.append(carrelloService.getTotaleProvvisorio());
 			totaleLabel.setText(testo.toString());
 		} catch (BusinessException e) {
 			dispatcher.renderError(e);

@@ -12,5 +12,6 @@ public interface CarrelloService {
 	
 	public void aggiungiProdottoCarrello(Prodotto prodotto) throws BusinessException;
 	
-	public Double getTotale();
+	public Double getTotaleProvvisorio();
+	
 }

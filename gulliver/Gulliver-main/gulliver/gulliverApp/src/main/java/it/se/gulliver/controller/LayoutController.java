@@ -36,7 +36,8 @@ public class LayoutController implements Initializable, DataInitializable<Utente
 	private static final MenuElement[] MENU_GESTORE = {new MenuElement("Crea ordine", "selezionetipospesa"), 
 			new MenuElement("Lista di ordini", "listaDiOrdiniGlobali"),
 			new MenuElement("CRUD utente", "crudUtente"), 
-			new MenuElement("Gestione catalogo", "gestioneCatalogo")};
+			new MenuElement("Gestione catalogo", "gestioneCatalogo"),
+			new MenuElement("Costi fissi", "impostazionecostifissi")};
 	
 	private Utente utente;
 	
