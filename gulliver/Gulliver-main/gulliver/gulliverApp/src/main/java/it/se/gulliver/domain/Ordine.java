@@ -95,4 +95,12 @@ public class Ordine {
 		this.valido = valido;
 	}
 
+	@Override
+	public String toString() {
+		return "Ordine [prodotti=" + prodotti + ", costiDiVariazione=" + costiDiVariazione + ", nomeAnziano="
+				+ nomeAnziano + ", cognomeAnziano=" + cognomeAnziano + ", note=" + note + ", indirizzoDiConsegna="
+				+ indirizzoDiConsegna + ", telefonoAnziano=" + telefonoAnziano + ", totale=" + totale + "]";
+	}
+
+	
 }

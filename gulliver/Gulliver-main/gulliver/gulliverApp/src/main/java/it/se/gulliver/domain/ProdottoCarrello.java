@@ -2,6 +2,12 @@ package it.se.gulliver.domain;
 
 public class ProdottoCarrello {
 
+	@Override
+	public String toString() {
+		return "ProdottoCarrello [id=" + id + ", quantità=" + quantità + ", prodotto=" + prodotto + ", prezzo=" + prezzo
+				+ ", spunta=" + spunta + "]";
+	}
+
 	private Integer id;
 	private Integer quantità;
 	private Prodotto prodotto;

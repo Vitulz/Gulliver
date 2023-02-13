@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.DettagliOrdineController">
+   <children>
+      <Label text="Dettagli ordine">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TableView fx:id="dettagliOrdineTable" prefHeight="241.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="immagineTableColumn" prefWidth="168.0" text="Immagine" />
+            <TableColumn fx:id="nomeTableColumn" prefWidth="150.4000244140625" text="Nome" />
+            <TableColumn fx:id="quantitàTableColumn" prefWidth="70.4000244140625" text="Quantità" />
+            <TableColumn fx:id="prezzoTableColumn" prefWidth="66.39996337890625" text="Prezzo" />
+            <TableColumn fx:id="azioniTableColumn" prefWidth="142.4000244140625" text="Azioni" />
+         </columns>
+      </TableView>
+      <HBox prefHeight="37.0" prefWidth="600.0">
+         <children>
+            <Label text="Totale ordine: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="totaleOrdineLabel" prefHeight="26.0" prefWidth="43.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="36.0" />
+            <Label text="Telefono: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="telefonoLabel" prefHeight="26.0" prefWidth="80.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="0.0" />
+            <Label text="Indirizzo: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="indirizzoLabel" prefHeight="26.0" prefWidth="103.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="54.0" prefWidth="600.0">
+         <children>
+            <Label text="Nome: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomeLabel" prefHeight="26.0" prefWidth="66.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="74.0" prefWidth="62.0" />
+            <Label text="Cognome: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="cognomeLabel">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="54.0" prefWidth="79.0" />
+            <Label text="Note: ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="noteLabel" prefHeight="26.0" prefWidth="171.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

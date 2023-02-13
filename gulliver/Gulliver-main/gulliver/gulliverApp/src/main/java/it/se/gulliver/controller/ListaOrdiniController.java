@@ -26,34 +26,34 @@ public class ListaOrdiniController implements Initializable, DataInitializable<U
 
 	@FXML
 	private TableView<Ordine> listaOrdiniTable;
-	
+
 	@FXML
 	private TableColumn<Ordine, String> indirizzoTableColumn;
-	
+
 	@FXML
 	private TableColumn<Ordine, String> nomeTableColumn;
 
 	@FXML
 	private TableColumn<Ordine, String> cognomeTableColumn;
-	
+
 	@FXML
 	private TableColumn<Ordine, Double> totaleTableColumn;
-	
+
 	@FXML
 	private TableColumn<Ordine, Button> azioniTableColumn;
-	
+
 	private ViewDispatcher dispatcher;
-	
+
 	private Utente utente;
-	
+
 	private OrdineService ordineService;
-	
+
 	public ListaOrdiniController() {
 		dispatcher = ViewDispatcher.getInstance();
 		GulliverBusinessFactory factory = GulliverBusinessFactory.getInstance();
 		ordineService = factory.getOrdineService();
 	}
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		indirizzoTableColumn.setCellValueFactory(new PropertyValueFactory<>("indirizzoDiConsegna"));
@@ -64,18 +64,13 @@ public class ListaOrdiniController implements Initializable, DataInitializable<U
 		azioniTableColumn.setCellValueFactory((CellDataFeatures<Ordine, Button> param) -> {
 			final Button dettagliButton = new Button("Dettagli");
 			dettagliButton.setOnAction((ActionEvent event) -> {
-				/*
-				try {
-					//
-				} catch (BusinessException e) {
-					e.printStackTrace();
-				}
-				*/
+				dispatcher.renderView("dettagliordine", param.getValue());
 			});
 			return new SimpleObjectProperty<Button>(dettagliButton);
 		});
+
 	}
-	
+
 	@Override
 	public void initializeData(Utente utente) {
 		this.utente = utente;
@@ -83,8 +78,8 @@ public class ListaOrdiniController implements Initializable, DataInitializable<U
 		ObservableList<Ordine> listaData = FXCollections.observableArrayList(listaOrdini);
 		listaOrdiniTable.setItems(listaData);
 	}
-	
-	
 
-	
+
+
+
 }
