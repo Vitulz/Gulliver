@@ -7,6 +7,7 @@ import it.se.gulliver.domain.Utente;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;;
 
@@ -30,6 +31,7 @@ public class ViewDispatcher {
 		this.stage = stage;
 		Parent loginView = loadView("login").getView();
 		Scene scene = new Scene(loginView);
+		stage.getIcons().add(new Image("/viste/gulliver-logo.png"));
 		stage.setScene(scene);
 		stage.show();
 	}

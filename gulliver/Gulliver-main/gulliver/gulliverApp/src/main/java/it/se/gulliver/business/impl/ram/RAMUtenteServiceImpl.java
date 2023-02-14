@@ -16,10 +16,10 @@ public class RAMUtenteServiceImpl implements UtenteService{
 			Operatore operatore = new Operatore();
 			operatore.setUsername(username);
 			operatore.setPassword(password);
-			operatore.setNome("Antonio");
-			operatore.setCognome("Sbancatore");
-			operatore.setIndirizzo("Via Lattea");
-			operatore.setNumeroDiTelefono(1324342);
+			operatore.setNome("Lorenzo");
+			operatore.setCognome("Di Paolo");
+			operatore.setIndirizzo("Corso Vittorio Emanuele");
+			operatore.setTelefono("3452887989");
 			return operatore;
 		}
 		
@@ -27,9 +27,9 @@ public class RAMUtenteServiceImpl implements UtenteService{
 			Socio socio = new Socio();
 			socio.setUsername(username);
 			socio.setPassword(password);
-			socio.setNome("Antonio");
-			socio.setCognome("Sbancatore");
-			socio.setTelefono(1234556);
+			socio.setNome("Samuele");
+			socio.setCognome("Verna");
+			socio.setTelefono("3927185273");
 			return socio;
 		}
 		
@@ -37,8 +37,8 @@ public class RAMUtenteServiceImpl implements UtenteService{
 			Utente gestore = new Gestore();
 			gestore.setUsername(username);
 			gestore.setPassword(password);
-			gestore.setNome("Antonio");
-			gestore.setCognome("Sbancatore");
+			gestore.setNome("Nicolas");
+			gestore.setCognome("Vitullo");
 			return gestore;
 		}
 		

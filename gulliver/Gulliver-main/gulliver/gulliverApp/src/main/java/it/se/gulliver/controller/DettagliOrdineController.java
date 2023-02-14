@@ -17,13 +17,14 @@ import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 
-public class DettagliOrdineController implements Initializable, DataInitializable<Utente>{
+public class DettagliOrdineController implements Initializable, DataInitializable<Ordine>{
 
 	@FXML
 	private TableView<ProdottoCarrello> dettagliOrdineTable;
@@ -42,6 +43,24 @@ public class DettagliOrdineController implements Initializable, DataInitializabl
 	
 	@FXML
 	private TableColumn<ProdottoCarrello, CheckBox> azioniTableColumn;
+	
+	@FXML
+	private Label totaleOrdineLabel;
+	
+	@FXML
+	private Label telefonoLabel;
+	
+	@FXML
+	private Label indirizzoLabel;
+	
+	@FXML
+	private Label nomeLabel;
+	
+	@FXML
+	private Label cognomeLabel;
+	
+	@FXML
+	private Label noteLabel;
 	
 	private ViewDispatcher dispatcher;
 	
@@ -63,6 +82,7 @@ public class DettagliOrdineController implements Initializable, DataInitializabl
 			final CheckBox spuntaCheckBox= new CheckBox();
 			return new SimpleObjectProperty<CheckBox>(spuntaCheckBox);
 		});
+		
 	}
 	
 	public void initializeData(Ordine ordine) {
@@ -70,9 +90,18 @@ public class DettagliOrdineController implements Initializable, DataInitializabl
 		List<ProdottoCarrello> prodotti = ordine.getProdotti(); 
 		ObservableList<ProdottoCarrello> prodottiData = FXCollections.observableArrayList(prodotti);
 		dettagliOrdineTable.setItems(prodottiData);
-		
+		totaleOrdineLabel.setText(ordine.getTotale().toString());
+		telefonoLabel.setText(ordine.getTelefonoAnziano());
+		indirizzoLabel.setText(ordine.getIndirizzoDiConsegna());
+		nomeLabel.setText(ordine.getNomeAnziano());
+		cognomeLabel.setText(ordine.getCognomeAnziano());
+		noteLabel.setText(ordine.getNote());
 	}
 	
+	@FXML
+	public void goBackAction() {
+		dispatcher.renderView("listaordini", new Utente());
+	}
 	
 
 }

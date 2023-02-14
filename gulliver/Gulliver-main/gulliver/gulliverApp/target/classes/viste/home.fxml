@@ -2,10 +2,11 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.HomeController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.se.gulliver.controller.HomeController">
    <children>
       <Separator opacity="0.0" prefHeight="5.0" prefWidth="600.0" />
       <Label fx:id="benvenutoLabel" text="Benvenuto">
@@ -13,5 +14,24 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Separator prefHeight="11.0" prefWidth="600.0" />
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="telefonoLabel" prefHeight="40.0" prefWidth="440.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="indirizzoLabel" prefHeight="40.0" prefWidth="497.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
    </children>
 </VBox>

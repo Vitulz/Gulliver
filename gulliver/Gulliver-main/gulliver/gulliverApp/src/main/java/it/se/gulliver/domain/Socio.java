@@ -2,13 +2,13 @@ package it.se.gulliver.domain;
 
 public class Socio extends Utente {
 
-	private int telefono;
+	private String telefono;
 
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
 
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
